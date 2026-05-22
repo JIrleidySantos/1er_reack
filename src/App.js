@@ -1,9 +1,12 @@
-import { Header } from './js/Header';
+
 import { Item } from './js/Item';
 import { Button } from './js/Button';
 import './App.css';
 import React from 'react';
-import { TodoListo } from './js/TodoListo';
+import { TodoList } from './js/TodoList';
+import { Header} from './js/Header';
+import { Search } from './js/Search';
+
 
 const tasks = [{text:'Revisar examenes', completed: true},
                 {text:'Escrbir', completed: false},
@@ -17,13 +20,15 @@ function App() {
     <React.Fragment>
 
       <Header total={5} completedados={3} />
-      <Header total={10} completedados={7} />
-      <Header total={15} completedados={12} />
+  
+      <Search />
 
-      <TodoListo>
+      <TodoList>
         {tasks.map(task => ( <Item key={task.text} text={task.text} completed={task.completed}/>
         ))}
-      </TodoListo>
+      </TodoList>
+      
+      <Button />
       
     </React.Fragment>
   );

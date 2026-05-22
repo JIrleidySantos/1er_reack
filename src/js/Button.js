@@ -1,5 +1,12 @@
+import '../css/Button.css';
 function Button() {
-  return (<button>Haz clic aquí</button>);
+  return (
+  <button className="CreateTodoButton"
+  onClick={() => {
+    console.log('Hola como vas')
+    }}>+
+  </button>
+  );
 }   
 
 export { Button };

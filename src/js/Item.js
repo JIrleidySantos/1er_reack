@@ -1,11 +1,16 @@
+import '../css/Item.css';
 function Item(task) {
-  return (
-    <li>
-      <p>Tarea</p>
-      <p>{task.text}</p>
-      <p>Y</p>
-    </li>
-  );
-}
+        return (
+        <li className="TodoItem">    
+           <span className={`Icon Icon-check ${task.completed && 'Icon-check--active'}`}> 
+            V 
+            </span>
+              <p className={`TodoItem-p ${task.completed && 'TodoItem-p--complete'}`}>
+                {task.text}
+                </p>
+              <span className="Icon Icon-delete"> X </span>
+        </li>
+        )
+    }
 
-export { Item };    
+    export { Item };

@@ -1,6 +1,11 @@
-.Pepito{
-  background: purple;
-  color: white;
+.TodoCounter {
+  font-size: 24px;
   text-align: center;
-  border-radius: 9px;
+  margin: 0;
+  padding: 48px;
+  font-weight: normal;
+}
+
+.TodoCounter span {
+  font-weight: bold;
 }
