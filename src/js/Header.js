@@ -1,8 +1,8 @@
 import '../css/Header.css';
 
-function Header({total,completedados}) {
+function Header({completed, total}) {
   return (<h1 className="TodoCounter">
-    <span>Has completado {completedados} de {total} tareas</span>
+    <span>Has completado <span>{completed}</span> de <span>{total}</span> tareas</span>
   </h1>);
 }
 

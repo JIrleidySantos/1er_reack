@@ -1,16 +1,18 @@
 import '../css/Item.css';
-function Item(task) {
-        return (
-        <li className="TodoItem">    
-           <span className={`Icon Icon-check ${task.completed && 'Icon-check--active'}`}> 
-            V 
-            </span>
-              <p className={`TodoItem-p ${task.completed && 'TodoItem-p--complete'}`}>
-                {task.text}
-                </p>
-              <span className="Icon Icon-delete"> X </span>
-        </li>
-        )
-    }
-
-    export { Item };
+function Item(props) {
+  return (
+    <li className="TodoItem">
+      <span className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`
+      } onClick={props.onCompleted}>
+        V
+      </span>
+      <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
+        {props.text}
+      </p>
+      <span className="Icon Icon-delete" onClick={props.onDelete}>
+        X
+      </span>
+    </li>
+  );
+}
+export { Item };
