@@ -23,3 +23,70 @@
 .CreateTodoButton:hover {
   transform: rotate(224deg);
 }
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  width: 350px;
+  padding: 30px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+  margin: 0;
+  text-align: center;
+  color: #1E1E1F;
+}
+
+.modal-content input {
+  padding: 10px;
+  border: 2px solid #61DAFA;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.modal-content button {
+  background-color: #61DAFA;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .3s;
+}
+
+.modal-content button:hover {
+  opacity: 0.8;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons-container button {
+  flex: 1;
+}
